@@ -39,12 +39,13 @@ class Branch:
         return child
 
     def copy(self):
-        # TODO: find out if giving my own parent as parent is a good idea
         c = Branch(self.tag, self._attrs, self.parent)
-        #self.parent.children.append(c)
         for child in self.children:
             if type(child) == Branch:
-                c.children.append(child.copy())
+                # recursive copy, setting up the family tree below me
+                d = child.copy()	
+                d.parent = c
+                c.children.append(d)
             else:
                 c.children.append(child)
         return c
@@ -130,7 +131,6 @@ class Branch:
         # also, does python do reference counting? could we have a memleak?
 
         #raise Exception("call a lawyer, parent denies knowledge of child")
-
 
     def givekidstoparent(self):
         # have my parent adopt my children in my place, commit suicide
