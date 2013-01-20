@@ -14,7 +14,7 @@ Inspired by Beautiful Soup, which doesn't support deep mutation of the parsed tr
  * support for (sub)tree replacement/mutation/clone
  * support for deep copying
  * support for multiple trees in single parse
- * hassle-free pretty-print via __str__() override
+ * hassle-free pretty-print via ''__str__()'' override
  * funky method names
 
 
