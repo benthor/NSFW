@@ -9,7 +9,7 @@ Inspired by Beautiful Soup, which doesn't support deep mutation of the parsed tr
  * powerful (sub)tree search 
    * matching on tags
    * matching on attributes
-   * matching on other features via custom match functions)
+   * matching on other features via custom match functions
  * built-in depth-first iterator
  * support for (sub)tree replacement/mutation/clone
  * support for deep copying
